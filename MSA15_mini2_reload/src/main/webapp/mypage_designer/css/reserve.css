@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 오토레이아웃 */
+.reserve-list {
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* padding: 40px 20px; */
+    width: 100%;
+    /* box-sizing: border-box; */
+    height: 100%;
+    padding: 0;
+    
+    background: #ffffff;
+}
+
+.reserve-list .inner {
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 45px;
+	/* min-height: 100vh; */
+}
+
+.right {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 984px;
+    
+    gap: 1.5rem;
+}
+
+.right p {
+    padding: 18px 20px;
+    width: 858px;
+    height: 102px;
+    background: #FFFFFF;
+}
+/* ===== table/row-base (Figma) ===== */
+.table-row-base{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+}
+
+/* ===== table-row (Figma) ===== */
+.table-row{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 858px;
+  max-width: 100%;
+  height: 62px; /* 피그마에 41px / 62px 둘 다 있었는데 “리스트”는 62px이 더 자연스러움 */
+  background: rgba(255,255,255,0.000001); /* hitbox */
+}
+
+/* row border-bottom (Figma border-bottom: Gray/300) */
+.table-row::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #DEE2E6;
+}
+
+/* 헤더 줄은 조금 더 얇게(원하면 41px로 바꿔도 됨) */
+.table-row--head{
+  height: 41px;
+  font-weight: 600;
+}
+.table-row--head::after{
+  border-bottom: 2px solid #212529; /* Figma에 Body Text/Body Color border-bottom이 강하게 있었음 */
+}
+
+/* 배경 강조(row-bgcolor) 느낌 */
+.table-row--stripe{
+  background: rgba(0,0,0,0.05); /* Figma opacity 0.05 */
+}
+
+/* ===== table-cell/text (Figma) ===== */
+.table-cell{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* 피그마에서 center가 많았음 */
+  padding: 8px;
+
+  height: 100%;
+  background: rgba(255,255,255,0.000001); /* hitbox */
+  color: #212529;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+/* 컬럼 너비 (피그마에서 200px, 107.6px, 120px 등) */
+.col-id   { width: 150px; }
+.col-type   { width: 107.6px; }
+.col-date   { width: 200px; }
+.col-name   { width: 107.6px; }
+.col-pay { width: 150px; }
+.col-action { width: 120px; align-items: flex-start; }
+
+/* ✅ Figma: page-items  → Bootstrap pagination HTML에 그대로 적용 */
+
+/* page-items (Figma) */
+.pagination{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0;
+  row-gap: 0;
+
+  width: 302px;
+  height: 31px;
+
+  background: #FFFFFF;
+
+  list-style: none;     /* ul 기본 점 제거 */
+  margin: 0;            /* 기본 여백 제거 */
+  gap: 6px;             /* 버튼 사이 간격(필요시 조절) */
+}
+
+/* 각 버튼(페이지 아이템) */
+.page-item{
+  display: flex;
+  align-items: center;
+}
+
+/* 링크(버튼) */
+.page-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 31px;
+  min-width: 31px;
+  padding: 0 10px;
+
+  background: #fff;
+  color: #212529;
+
+  border: 1px solid #DEE2E6;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* hover */
+.page-link:hover{
+  background: rgba(0,0,0,0.05);
+}
+
+h1 {
+  align-self: flex-start;
+  text-align: left;
+  
+   padding: 1rem;
+}
+

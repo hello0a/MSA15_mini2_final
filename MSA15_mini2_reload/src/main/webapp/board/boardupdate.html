@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 수정</title>
+  <link rel="stylesheet" href="css/boardcreate.css">
+</head>
+<body>
+
+<header>
+  <div class="left">
+    <a href="">
+      <img src="img/logo.png" alt="">
+      <span>사이트 이름</span>
+    </a>
+  </div>
+  <a href="">로그인</a>
+</header>
+
+<section class="write-wrap">
+  <h1 class="title">게시글 수정</h1>
+
+  <form>
+    <div class="form-row">
+      <label>매장</label>
+      <select disabled>
+        <option selected>a</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label>제목</label>
+      <input type="text" value="기존 글 제목">
+    </div>
+
+    <div class="form-row">
+      <label>작성자</label>
+      <input type="text" value="홍길동" readonly>
+    </div>
+
+    <div class="form-row">
+      <label>내용</label>
+      <textarea>기존 글 내용입니다.</textarea>
+    </div>
+
+    <!-- 버튼 영역 -->
+    <div class="btn-area">
+      <button type="submit" class="btn btn-write">수정완료</button>
+      <button type="button" onclick ="location.href='boardread.html'" class="btn btn-cancel">취소</button>
+    </div>
+  </form>
+</section>
+
+</body>
+</html>
