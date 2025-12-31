@@ -1,5 +1,7 @@
 package reservation.service;
 
+import java.util.List;
+
 import reservation.dto.DesignerDTO;
 import reservation.dto.UserDTO;
 
@@ -18,5 +20,7 @@ public interface DesignerService {
 		
 		// ȸ�� ���� ��ȸ
 		DesignerDTO getDesigner(String profile);
+		
+		 List<DesignerDTO> findAll();
 
 }

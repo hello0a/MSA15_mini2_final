@@ -1,3 +1,4 @@
+<%@page import="reservation.dto.DesignerDTO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
@@ -20,7 +21,7 @@
 		<jsp:include page="/layout/header.jsp" />
 	</header>
 	<div class=containerbox>
-		<section class="sec1">
+		<section class="sec1">	
 			<div class="container">
 				<div>
 					<h1>나 홀로 망머샵</h1>
@@ -36,12 +37,14 @@
 		</section>
 		<section class="sec3">
 			<select class="shop" id="">
-				<option value="">DB 연결 후 매장명 + 디자이너이름 + 위치(서울,강서구)</option>
+				<c:forEach var="d" items="${designerList}">
+                <option value="${d.id}">${d.shop_name}</option>
+           		 </c:forEach>
 			</select>
 			<button class="btn">예약하기</button>
-			</div>
 		</section>
-	</div>
+			</div>
+	
 <footer>
 	<jsp:include page="/layout/footer.jsp" />
 </footer>

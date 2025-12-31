@@ -1,6 +1,11 @@
 package reservation.service;
 
+import java.sql.JDBCType;
+import java.util.ArrayList;
+import java.util.List;
+
 import reservation.dao.DesignerDAO;
+import reservation.dao.JDBConnection;
 import reservation.dto.DesignerDTO;
 import reservation.dto.UserDTO;
 import reservation.utils.PasswordUilts;
@@ -67,6 +72,11 @@ public class DesignerServiceImpl implements DesignerService{
 		return designerDto;
 	}
 	
+
+	 @Override
+	    public List<DesignerDTO> findAll() {
+	        return designerDao.findAll();
+	    }
 	
 	
 
