@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 30px;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	padding: 0 20px;
+}
+
+.name {
+	font-size: 25px;
+	justify-content: center;
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+	margin: 40px 0;
+}
+
+section {
+	justify-content: center;
+	text-align: center;
+}
+
+.boardText {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.board-box {
+	width: 600px;
+	margin: 0 auto;
+}
+
+table {
+	width: 600px;
+	margin: 15px auto;
+	border-collapse: separate;
+	border-spacing: 0 12px;
+}
+
+thead {
+	display: none;
+}
+
+/* 각 행 = 카드 */
+tbody tr {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 셀 기본 스타일 */
+tbody td {
+	padding: 14px 12px;
+	border: none;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+/* 제목(두 번째 칸) 강조 */
+tbody td:nth-child(2) {
+	font-weight: 600;
+	text-align: left;
+}
+
+/* 작성자 */
+tbody td:nth-child(3) {
+	text-align: center;
+	color: #555;
+}
+
+/* 날짜 */
+tbody td:nth-child(5) {
+	text-align: center;
+	color: #888;
+	font-size: 13px;
+}
+
+/* 말줄임 */
+tbody td {
+	max-width: 160px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* hover 효과 */
+tbody tr:hover {
+	background-color: #f9f9f9;
+	cursor: pointer;
+}
+
+.name2 {
+	font-size: 18px;
+	border-radius: 8px;
+	box-shadow: 3px 2px rgba(0, 0, 0, 0.0003);
+}
+
+.btn-area {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn {
+	width: 150px;
+	font-size: 20px;
+	color: #fff;
+	background-color: royalblue;
+	border-radius: 10px;
+}
+
+.btn:hover {
+	background: #357bd8;
+}

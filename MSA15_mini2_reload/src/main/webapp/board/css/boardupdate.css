@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 30px;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	padding: 0 20px;
+}
+
+.write-wrap {
+	width: 600px;
+	margin: 40px auto;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+form {
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+textarea {
+	height: 200px;
+	resize: none;
+}
+
+
+
+
+input[readonly],
+select:disabled {
+	background-color: #f5f5f5;
+	color: #666;
+}
+
+/* 버튼 영역 */
+.btn-area {
+    display: flex !important;
+    justify-content: flex-end !important; /* 오른쪽 정렬 강제 */
+    gap: 12px;
+    margin-top: 20px;
+}
+
+
+/* 버튼 공통 */
+.btn {
+    padding: 8px 16px;        /* 버튼 크기 */
+    font-size: 15px;          /* 글씨 크기 */
+    border-radius: 8px;       /* 모서리 둥글게 */
+    text-decoration: none;
+    cursor: pointer;
+    background-color: royalblue;
+    color: #fff;
+    border: none;
+}
+
+/* 취소 버튼 */
+.btn-cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn:hover {
+	background-color: #285bb5;
+}
+
+

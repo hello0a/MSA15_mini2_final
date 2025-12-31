@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	padding: 0 20px;
+}
+
+img {
+	width: 30px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 30px;
+}
+
+/* 본문 */
+.view-wrap {
+	width: 600px;
+	margin: 20px auto;
+}
+
+.view-box {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 24px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.view-title {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid gray;
+}
+
+.view-info {
+	display: flex;
+	justify-content: space-between;
+	color: black;
+	font-size: 14px;
+	margin-bottom: 12px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid gray;
+}
+
+.view-content {
+	font-size: 15px;
+	line-height: 1.6;
+	white-space: pre-line;
+}
+
+/* 버튼 영역 */
+.btn-area {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.btn-right {
+	margin-left: auto;
+	display: flex;
+	gap: 10px;
+}
+
+/* 버튼 공통 */
+.btn {
+	padding: 6px 14px;
+	font-size: 14px;
+	border-radius: 8px;
+	border: 2px solid gray;
+	background-color: royalblue;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* hover */
+.btn:hover {
+	background-color: #357bd8;
+}
+
+/* 답변 제목 */
+.reply-title {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 답변 박스 고정 */
+.reply-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    min-height: 80px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
+
+/* 답변 내용 */
+.reply-content {
+    white-space: pre-wrap;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* 날짜 */
+.reply-date {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+}
+
+/* 답변 없을 때 */
+.reply-empty {
+    color: #999;
+    font-style: italic;
+}
+
+/* 답변 추가 버튼 */
+.reply-btn {
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background-color: #e0e0e0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 답변 작성폼 */
+.reply-form {
+    display: none;
+}
+
+.reply-form textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 8px;
+    resize: none;
+}
+
+.reply-form button {
+    padding: 6px 14px;
+}

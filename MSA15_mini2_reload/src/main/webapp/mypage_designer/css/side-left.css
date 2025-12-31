@@ -1,0 +1,155 @@
+/* Frame 1 */
+
+/* 오토레이아웃 */
+.container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+
+width: 188px;
+height: 984px;
+
+/* 내부 오토레이아웃 */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+/* Frame 6 */
+.user-profile{
+	width: 188px;
+	height: 228px;
+    gap: 0.5rem;
+	/* background: #FFFFFF; */
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+	/*  
+	내부 오토레이아웃 */
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0; 
+}
+
+img {
+/* 오토레이아웃 */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+/* position: absolute; */
+width: 150px;
+height: 150px;
+left: 19px;
+top: 20px;
+
+border-radius: 100px;
+}
+
+.user-profile p {
+	box-sizing: border-box;
+	
+	/* 오토레이아웃 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 12px 8px 16px;
+	isolation: isolate;
+	
+	width: 100px;
+	height: 30px;
+	left: 44px;
+	top: 184px;
+	
+	/* Theme/Body Background */
+/* 	background: #FFFFFF; */
+	/* Gray/400 */
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    color: gray
+}
+
+.mypage-index {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+width: 188px;
+height: 244px;
+
+/* 
+내부 오토레이아웃
+flex-grow: 0; */
+flex: none;
+order: 1;
+align-self: stretch;
+
+}
+
+.mypage-index p {
+/* 오토레이아웃 */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 4px;
+
+width: 188px;
+height: 40px;
+
+/* Blue/100 */
+background: #E7F1FF;
+
+/* 내부 오토레이아웃 */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.mypage-index a {
+	
+   padding-left: 0.5rem;
+   text-decoration: none;
+   color: black;
+}
+
+
+.mypage-index a:hover{
+  background: #357bd8;
+  border-color: #474747;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+
+.list {
+/* 오토레이아웃 */
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 8px;
+
+width: 188px;
+height: 40px;
+
+background: gainsboro;
+
+/* 내부 오토레이아웃 */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+
+

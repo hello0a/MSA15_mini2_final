@@ -1,0 +1,41 @@
+/* wrapper */
+
+/* 오토레이아웃 */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	width: 370.67px;
+	height: 420.11px;
+}
+
+.img-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	width: 1116px;
+	height: 446.11px;
+}
+
+.reserve-detail {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	width: 370.67px;
+	height: 173px;
+}
+
+/* 내부 오토레이아웃 */
+flex: none;
+
+
+order: 1;
+
+
+align-self: stretch;
+
+
+flex-grow: 0;
