@@ -1,23 +1,103 @@
-# Compiled class file
+############################
+# OS / Editor general
+############################
+.DS_Store
+Thumbs.db
+Desktop.ini
 
+# VS Code
+.vscode/
+*.code-workspace
 
-# Log file
+# IntelliJ / JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+.recommenders/
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Sublime / other editors
+*.sublime-workspace
+*.sublime-project
+
+############################
+# Java build outputs
+############################
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.buildNumber
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+############################
+# Logs / temp
+############################
 *.log
+*.tmp
+*.swp
+*.swo
+*~
+*.bak
 
-# BlueJ files
-*.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+############################
+# Application config secrets (선택)
+# 프로젝트 정책에 맞게 조정
+############################
+# .env
+# *.local
+# application-local.properties
+# application-local.yml
 
-# Package Files #
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+############################
+# Server / Runtime (Tomcat 등)
+############################
+# Eclipse WTP / Servers (로컬 톰캣 설정)
+Servers/
+# (만약 아래 경로가 생기면 로컬 런타임/배포 산출물일 가능성 큼)
+# .wtpwebapps/
+# .server/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+############################
+# Node (프론트가 섞여있다면)
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+.cache/
+
+############################
+# Database / local dumps (선택)
+############################
+# *.sql
+# *.sqlite
+# *.db
+/bin/
