@@ -1,5 +1,8 @@
 package reservation.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import reservation.dto.DesignerDTO;
 
 public class DesignerDAO extends JDBConnection{
@@ -157,7 +160,28 @@ public class DesignerDAO extends JDBConnection{
 	    return "";
 	}
 	
-	
+
+	public List<DesignerDTO> findAll() {
+	    List<DesignerDTO> list = new ArrayList<>();
+	    String sql = "SELECT designer_id, shop_name FROM designers";
+
+	    try (var con = reservation.utils.DBUtil.getConnection();
+	         var ps = con.prepareStatement(sql);
+	         var rs = ps.executeQuery()) {
+
+	        while (rs.next()) {
+	            DesignerDTO designerDto = new DesignerDTO();
+	            designerDto.setId(rs.getString("designer_id"));
+	            designerDto.setShop_name(rs.getString("shop_name"));
+	            list.add(designerDto);
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return list;
+	}
 
 }
 
