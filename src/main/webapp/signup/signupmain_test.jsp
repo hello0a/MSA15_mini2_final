@@ -3,18 +3,22 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ include file="/layout/common.jsp" %>
-<%@ page language="java" contentType="text/html;" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html charset=UTF-8;" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회원가입 선택</title>
+	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/login/css/loginmain.css">
-	</style>
 </head>
 
 <body>
+	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
 	<div class="container">
 		<h1 class="title">회원가입</h1>
 
@@ -28,6 +32,9 @@
 			</a>
 		</div>
 	</div>
+	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
 </body>
 
 </html>

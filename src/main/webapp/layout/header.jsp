@@ -1,12 +1,12 @@
 <%@ include file="/layout/common.jsp" %>
-<%@page import="reservation.dto.DesignerDTO"%>
-<%@page import="reservation.dto.UserDTO"%>
+<%@page import="member.dto.DesignerDTO"%>
+<%@page import="member.dto.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 	<header class="site-header">
 		<div class="header-container">
 			<!-- 로고 영역: 클릭 시 홈으로 이동 (임시로 index.jsp) -->
 			<a href="${root}/main" class="logo-area"> <span class="logo-icon">✂️</span>
-				<span class="site-title">망머샵 미용실</span>
+				<span class="site-title">나홀로 망머샵</span>
 			</a>
 
 			<!-- 사용자 메뉴 영역 -->

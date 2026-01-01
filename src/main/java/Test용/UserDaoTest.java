@@ -1,8 +1,7 @@
-package Test¿ë;
+package Testìš©;
 
-import reservation.dao.UserDAO;
-import reservation.dao.UserDAOImpl;
-import reservation.dto.UserDTO;
+import member.dao.UserDAO;
+import member.dto.UserDTO;
 
 import java.sql.Date;
 import java.util.UUID;
@@ -11,9 +10,9 @@ public class UserDaoTest {
 
     public static void main(String[] args) {
 
-        UserDAO dao = new UserDAOImpl();
+        UserDAO dao = new UserDAO();
 
-        // 1. È¸¿ø°¡ÀÔ Å×½ºÆ®
+        // 1. È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®
         UserDTO newUser = new UserDTO();
 //        newUser.setId("test01");
 //        String testId = "test_" + System.currentTimeMillis();
@@ -23,40 +22,40 @@ public class UserDaoTest {
 
         newUser.setPassword("1234");
         newUser.setEmail("test01@test.com");
-        newUser.setFull_name("Å×½ºÆ®À¯Àú");
+        newUser.setFull_name("ï¿½×½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½");
         newUser.setBirth(Date.valueOf("2000-01-01"));
         newUser.setGender("M");
         newUser.setNationality("K");
         newUser.setPhonenumber("01012345678");
 
         int signupResult = dao.signup(newUser);
-        System.out.println("È¸¿ø°¡ÀÔ °á°ú: " + signupResult); // 1ÀÌ¸é ¼º°ø
+        System.out.println("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½: " + signupResult); // 1ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-        // 2. ·Î±×ÀÎ Å×½ºÆ®
-        UserDTO loginUser = dao.selectById(testId);
+        // 2. ï¿½Î±ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®
+        UserDTO loginUser = dao.select(testId);
 
         if (loginUser != null) {
-            System.out.println("·Î±×ÀÎ ¼º°ø: " + loginUser.getFull_name());
+            System.out.println("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + loginUser.getFull_name());
         } else {
-            System.out.println("·Î±×ÀÎ ½ÇÆÐ");
+            System.out.println("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         }
 
-        // 3. ¸¶ÀÌÆäÀÌÁö Á¶È¸ Å×½ºÆ®
-        UserDTO userInfo = dao.selectById(testId);
+        // 3. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½×½ï¿½Æ®
+        UserDTO userInfo = dao.select(testId);
 
         if (userInfo != null) {
-            System.out.println("È¸¿øÁ¤º¸ Á¶È¸ ¼º°ø");
-            System.out.println("ÀÌ¸§: " + userInfo.getFull_name());
-            System.out.println("ÀÌ¸ÞÀÏ: " + userInfo.getEmail());
+            System.out.println("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½");
+            System.out.println("ï¿½Ì¸ï¿½: " + userInfo.getFull_name());
+            System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½: " + userInfo.getEmail());
         } else {
-            System.out.println("È¸¿øÁ¤º¸ Á¶È¸ ½ÇÆÐ");
+            System.out.println("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½");
         }
 
-        // 4. ¸¶ÀÌÆäÀÌÁö ¼öÁ¤ Å×½ºÆ®
+        // 4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ®
         userInfo.setEmail("updated"+uuid+"@test.com");
         userInfo.setPhonenumber("01099998888");
 
         int updateResult = dao.mypageupdate(userInfo);
-        System.out.println("È¸¿øÁ¤º¸ ¼öÁ¤ °á°ú: " + updateResult); // 1ÀÌ¸é ¼º°ø
+        System.out.println("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½: " + updateResult); // 1ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 }
