@@ -8,7 +8,7 @@ public class boardDTO {
     
     
     
-    
+    private int userNo;
     private String content;
     private String writer;
     private int designerNo;   
@@ -21,6 +21,9 @@ public class boardDTO {
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
+    public int getUserNo() { return userNo; }
+    public void setUserNo(int userNo) { this.userNo = userNo; }
+    
     public String getContent() { return content; }
     public void setContent(String content) { this.content = content; }
 
