@@ -10,11 +10,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/login/css/id_find.css">
 	<title>아이디 찾기</title>
 </head>
 
 <body>
+	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
+	<div class="container">
 	<div class="find-wrap">
 		<h1 class="title">아이디 찾기</h1>
 
@@ -47,6 +52,10 @@
 			<a href="${root}/designer/login">로그인</a> | <a href="${root}/designer/signup">회원가입</a>
 		</div>
 	</div>
+	</div>
+	<footer>
+	<jsp:include page="/layout/footer.jsp" />
+	</footer>
 </body>
 
 </html>

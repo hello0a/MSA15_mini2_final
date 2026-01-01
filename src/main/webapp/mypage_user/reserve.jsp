@@ -35,7 +35,7 @@
                 <div class="reserve">
                     <div class="designer-profile">
 	                    <div class="user-profile">
-							<img src="/mypage_user/img/profile.png" alt="회원 프로필 사진">			
+							<img src="/mypage_user/img/1 (3).jpg" alt="회원 프로필 사진">			
 						</div>
                         <%-- <p class="designer-name">${res.designerName}</p> --%>
                         <p class="designer-name">${res.designerName}</p>

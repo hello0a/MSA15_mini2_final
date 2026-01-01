@@ -10,11 +10,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>로그인 선택</title>
+	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/login/css/loginmain.css">
 	</style>
 </head>
 
 <body>
+	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
 	<div class="container">
 		<h1 class="title">로그인</h1>
 
@@ -28,6 +32,9 @@
 			</a>
 		</div>
 	</div>
+	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
 </body>
 
 </html>

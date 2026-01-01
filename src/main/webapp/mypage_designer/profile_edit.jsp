@@ -66,7 +66,7 @@
 							<p><input id="addrDetail" name="addrDetail" value="${designer.addr_detail}" ></p>
 						</div>
 					</div>
-				<a class="designer-profile-edit" href="${root}/designer/profile?id=${designer.id}">수정 완료</a>
+				<button type="submit" class="designer-profile-edit">수정 완료</button>
 				</div>
 			</section>
 		</form>
