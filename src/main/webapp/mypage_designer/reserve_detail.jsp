@@ -8,6 +8,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/mypage_designer/css/side-left.css">
 	<link rel="stylesheet" href="${root}/mypage_designer/css/reserve_detail.css">
@@ -22,12 +23,14 @@
 			<section class="left">
 				<jsp:include page="${root}/mypage_designer/side-left.jsp" />
 			</section>
+			<form id="designer-profile-edit" action="${root}/designer/reserve_detail" method="post">
 			<section class="right">
-				<div class="designer-profile">
+				<div class="user-profile">
 					<img src="${root}/mypage_user/img/profile.png" alt="회원 프로필 사진">
-					<p>${user.full_name}</p>
+					<p>${reservations.userName}</p>
 				</div>
 				<div class="reserve-area">
+				<input type="hidden" id="no" name="no" value="${reserveNo}" >
 					<div class="reserve-detail">
 						<div class="label-wrap">
 							<label class="id">예약 날짜</label> 
@@ -39,21 +42,22 @@
 							<label class="email">특이사항</label> 
 						</div>
 						<div class="p-wrap">
-							<p>예약 날짜</p>
-							<p>예약 시간</p>
-							<p>시술 종류</p>
-							<p>생년월일</p>
-							<p>전화번호</p>
+							<p>${reservations.date }</p>
+							<p>${reservations.time }</p>
+							<p>${reservations.serviceName }</p>
+							<p>${reservations.birth }</p>
+							<p>${reservations.phoneNumber }</p>
 							<div class="button-wrap">
-								<button>남</button>
-								<button>여</button>
+								<button type="button" class="${reservations.gender == 'M' ? 'active' : ''}">남</button>
+								<button type="button" class="${reservations.gender == 'F' ? 'active' : ''}">여</button>
 							</div>
-							<textarea name="spec" rows="5">특이사항</textarea>
+							<textarea id="etc" name="etc" rows="5">${reservations.etc }</textarea>
 						</div>
 					</div>
-					<a class="reserve-edit" href="${root}/designer/mypage/reserve-edit?id=${user.id}">특이사항 변경</a>
+					<button type="submit" class="reserve-edit">특이사항 변경</button>
 				</div>
 			</section>
+			</form>
 		</div>
 	</main>
 	<footer>

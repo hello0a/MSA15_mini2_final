@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/designer/mypage")
+@WebServlet("/designer/__mypage")
 public class DesignerSchedule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -19,6 +19,7 @@ public class DesignerSchedule extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.getRequestDispatcher("/mypage_designer/schedule.jsp").forward(request, response);
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

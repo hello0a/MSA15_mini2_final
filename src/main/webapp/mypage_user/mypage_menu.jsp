@@ -19,9 +19,9 @@
 		
 		<nav class="mypage-index">
 			<a href="${root}/user/mypage/profile?id=${user.id}" class="user-info">회원 정보</a> 
-			<a href="${root}/mypage_user/reserve/reserve.html" class="user-reserve">예약 조회</a> 
-			<a href="${root}/mypage_user/review/review.html" class="user-review">후기 관리</a> 
-			<a href="${root}/board/list" class="user-board">C/S 문의</a>
+			<a href="${root}/user/mypage/reserve?id=${user.id}" class="user-reserve">예약조회</a> 
+			<a href="${root}/review/review_list.jsp" class="user-review">후기관리</a>
+			<a href="${root}/board/list" class="user-board">CS 문의</a>
 		</nav>
 	</section>
 </body>

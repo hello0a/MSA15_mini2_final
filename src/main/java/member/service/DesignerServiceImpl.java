@@ -10,6 +10,7 @@ import member.dto.DesignerDTO;
 import member.dto.UserDTO;
 import member.utils.PasswordUilts;
 
+
 public class DesignerServiceImpl implements DesignerService{
 
 	private DesignerDAO designerDao = new DesignerDAO();
@@ -72,12 +73,10 @@ public class DesignerServiceImpl implements DesignerService{
 		return designerDto;
 	}
 	
-
-	 @Override
-	    public List<DesignerDTO> findAll() {
-	        return designerDao.findAll();
-	    }
-	
+	@Override
+	public List<DesignerDTO> findAll() {
+		return designerDao.findAll();
+	}
 	
 
 }

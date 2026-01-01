@@ -51,7 +51,7 @@ import member.dto.UserDTO;
 			try (var con = member.utils.DBUtil.getConnection();
 				var ps = con.prepareStatement(sql)) {
 				
-				ps.setInt(1, user.getNo());
+				ps.setInt(1, user.getNo()); 
 				ps.setString(2, user.getId());
 				ps.setString(3, user.getPassword());
 				ps.setString(4, user.getEmail());

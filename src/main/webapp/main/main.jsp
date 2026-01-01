@@ -1,4 +1,4 @@
-<%@page import="member.dto.DesignerDTO"%>
+<%reservation.dtort="member.dto.DesignerDTO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="${root}/main/css/main.css">
 </head>
 
-	
 <body>
 	<header>
 		<jsp:include page="/layout/header.jsp" />
@@ -33,19 +32,15 @@
 				</div>
 			</div>
 		</section>
-		<%
-		DesignerDTO designer = (DesignerDTO) session.getAttribute("designer");
-	%>
 		<section class="sec2">
 			<h2>샵 예약하기</h2>
 		</section>
 		<section class="sec3">
 			<select class="shop" id="">
-				 <c:forEach var="d" items="${designerList}">
-                <option value="${d.id}">${d.shop_name}</option>
-            </c:forEach>
+				<option value="">DB 연결 후 매장명 + 디자이너이름 + 위치(서울,강서구)</option>
 			</select>
 			<button class="btn">예약하기</button>
+			</div>
 		</section>
 	</div>
 <footer>

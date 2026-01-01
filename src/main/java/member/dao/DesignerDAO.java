@@ -1,9 +1,8 @@
 package member.dao;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import member.dto.DesignerDTO;
+
 
 public class DesignerDAO extends JDBConnection{
 	
@@ -159,11 +158,10 @@ public class DesignerDAO extends JDBConnection{
 	    }
 	    return "";
 	}
-	
 
 	public List<DesignerDTO> findAll() {
 	    List<DesignerDTO> list = new ArrayList<>();
-	    String sql = "SELECT id, shop_name FROM designer";
+	    String sql = "SELECT no, id, shop_name FROM designer";
 
 	    try (var con = member.utils.DBUtil.getConnection();
 	         var ps = con.prepareStatement(sql);
@@ -171,6 +169,7 @@ public class DesignerDAO extends JDBConnection{
 
 	        while (rs.next()) {
 	            DesignerDTO designerDto = new DesignerDTO();
+	            designerDto.setNo(rs.getInt("no"));
 	            designerDto.setId(rs.getString("id"));
 	            designerDto.setShop_name(rs.getString("shop_name"));
 	            list.add(designerDto);

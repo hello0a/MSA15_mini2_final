@@ -40,7 +40,7 @@ public class DesignerLogin extends HttpServlet {
 		}
 		
 
-		request.getRequestDispatcher("/login/designer_login_test.jsp").forward(request, response);
+		request.getRequestDispatcher("/login/designer_login.jsp").forward(request, response);
 		
 	}
 
@@ -74,12 +74,13 @@ public class DesignerLogin extends HttpServlet {
 		
 		if (result == null) {
 			// 다시 로그인 화면으로 이동
-			response.sendRedirect("/designer/login");
+			response.sendRedirect(request.getContextPath() + "/designer/login");
 			return;
 		} else {
 		
 			HttpSession session = request.getSession();
 			session.setAttribute("designer", result);
+			session.setAttribute("designerNo", result.getNo());
 			session.setAttribute("id", result.getId());
 			session.setAttribute("pw", result.getPassword());
 		}

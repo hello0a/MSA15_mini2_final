@@ -16,7 +16,7 @@ public class LoginMain extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/login/loginmain_test.jsp").forward(request, response);
+		request.getRequestDispatcher("/login/main_login.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

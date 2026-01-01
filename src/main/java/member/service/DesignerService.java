@@ -5,6 +5,7 @@ import java.util.List;
 import member.dto.DesignerDTO;
 import member.dto.UserDTO;
 
+
 public interface DesignerService {
 	
 		DesignerDTO login(DesignerDTO designer);
@@ -20,7 +21,7 @@ public interface DesignerService {
 		
 		// ȸ�� ���� ��ȸ
 		DesignerDTO getDesigner(String profile);
-		
-		 List<DesignerDTO> findAll();
+
+		List<DesignerDTO> findAll();
 
 }
