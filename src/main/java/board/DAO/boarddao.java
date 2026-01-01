@@ -46,7 +46,7 @@ public class boarddao {
 
     public boardDTO findByNo(int no) {
         boardDTO dto = null;
-        String sql = "SELECT b.no, b.title, b.content, u.full_name AS writer, d.no AS designerNo, d.shop_name, b.created_at " +
+        String sql = "SELECT b.no, b.title, b.content, b.user_no, u.full_name AS writer, d.no AS designerNo, d.shop_name, b.created_at " +
                      "FROM board b " +
                      "JOIN users u ON b.user_no = u.no " +
                      "JOIN designer d ON b.designer_no = d.no " +
@@ -62,6 +62,7 @@ public class boarddao {
                 dto.setNo(db.rs.getInt("no"));
                 dto.setTitle(db.rs.getString("title"));
                 dto.setContent(db.rs.getString("content"));
+                dto.setUserNo(db.rs.getInt("user_no")); // ← 여기 중요
                 dto.setWriter(db.rs.getString("writer"));
                 dto.setDesignerNo(db.rs.getInt("designerNo"));
                 dto.setShopName(db.rs.getString("shop_name"));
@@ -75,6 +76,7 @@ public class boarddao {
         return dto;
     }
 
+
     public boolean insert(boardDTO board) {
         String sql = "INSERT INTO board(title, content, user_no, designer_no, created_at) VALUES(?, ?, ?, ?, NOW())";
         JDBConnection db = new JDBConnection();
@@ -82,7 +84,7 @@ public class boarddao {
             db.psmt = db.con.prepareStatement(sql);
             db.psmt.setString(1, board.getTitle());
             db.psmt.setString(2, board.getContent());
-            db.psmt.setInt(3, 1); // -- > 濡쒓렇�씤 �븳 �쑀�� �븘�씠�뵒 諛쏆븘���빞�븿
+            db.psmt.setInt(3, board.getUserNo()); // 로그인 유저 번호 사용
             db.psmt.setInt(4, board.getDesignerNo());
             int result = db.psmt.executeUpdate();
             return result > 0;
@@ -93,6 +95,7 @@ public class boarddao {
         }
         return false;
     }
+
 
     public boolean update(boardDTO board) {
         String sql = "UPDATE board SET title=?, content=?, designer_no=? WHERE no=?";
