@@ -9,8 +9,8 @@ body {
 	height: 100vh;
 	background: #f2f2f2;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: center;/* 
+	align-items: center; */
 }
 
 .find-wrap {
@@ -19,6 +19,11 @@ body {
 	border-radius: 16px;
 	padding: 40px 32px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+/* 	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; */
 }
 
 .title {
@@ -100,4 +105,12 @@ body {
 
 .bottom-links a:hover {
 	text-decoration: underline;
+}
+
+.container {
+	    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }

@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     const dateInput = document.getElementById("reserveDate");
     const timeRadios = document.querySelectorAll('input[name="time"]');
-    const serviceCheckboxes = document.querySelectorAll('input[name="service"]');
+    const serviceCheckboxes = document.querySelectorAll('input[name="styleNo"]');
     const totalPriceSpan = document.getElementById("totalPrice");
 
     // 날짜 과거 선택 방지 + 시간 disable 처리

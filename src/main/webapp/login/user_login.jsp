@@ -11,10 +11,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="${root}/login/css/login.css">
+	<link rel="stylesheet" href="${root}/layout/common.css">
 	<title>로그인</title>
 </head>
 
 <body>
+	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
 	<form action="${root}/user/login" method="post">
 	<div class="login-wrap">
 		<!-- ë¡ê³  -->
@@ -45,6 +49,9 @@
 		</div>
 	</div>
 	</form>
+	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
 </body>
 
 </html>

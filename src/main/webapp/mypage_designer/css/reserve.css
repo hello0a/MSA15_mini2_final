@@ -107,12 +107,13 @@
 }
 
 /* 컬럼 너비 (피그마에서 200px, 107.6px, 120px 등) */
-.col-id   { width: 150px; }
-.col-type   { width: 107.6px; }
-.col-date   { width: 200px; }
-.col-name   { width: 107.6px; }
-.col-pay { width: 150px; }
-.col-action { width: 120px; align-items: flex-start; }
+.col-id   { width: 100%; }
+.col-type   { width: 100%; }
+.col-date   { width: 100%; }
+.col-name   { width: 100%; }
+.col-pay { width: 100%; }
+.col-action { width: 100%; align-items: flex-start; }
+.col-time	{ width: 100%; }
 
 /* ✅ Figma: page-items  → Bootstrap pagination HTML에 그대로 적용 */
 

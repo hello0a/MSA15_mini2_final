@@ -169,13 +169,22 @@
 	/* Theme/Body Background */
 	background: #FFFFFF;
 	/* Gray/400 */
-	border: 1px solid #CED4DA;
 	border-radius: 0.3rem;
+	
+	padding: 0.25rem;
+    border: 1px solid gainsboro;
 }
 
 .p-wrap input {
-	
-    border: none;
+	border: none;
+    background: none;
+    text-align: center;
+/*     font-size: 17px;
+    font-weight: 400; */
+}
+
+.p-wrap .input-fix {
+background: gainsboro;
 }
 
 
