@@ -26,7 +26,7 @@ public class DesignerSignUp extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 
-		request.getRequestDispatcher("/signup/signup_owner_test.jsp").forward(request, response);
+		request.getRequestDispatcher("/signup/designer_signup.jsp").forward(request, response);
 		
 	}
 
@@ -73,7 +73,7 @@ public class DesignerSignUp extends HttpServlet {
 		if (result == 0) {
 			response.sendRedirect(request.getContextPath() + "/designer/signup");
 		} else {
-			response.sendRedirect(request.getContextPath() + "/main/");
+			response.sendRedirect(request.getContextPath() + "/main");
 		}
 	}
 

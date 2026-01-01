@@ -10,15 +10,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/login/css/login.css">
 	<title>로그인</title>
 </head>
 
 <body>
-	<header>
-		<jsp:include page="/layout/header.jsp" />
-	</header>
 	<form action="${root}/user/login" method="post">
 	<div class="login-wrap">
 		<!-- ë¡ê³  -->
@@ -26,7 +22,7 @@
 			<span class="logo-icon">✂️</span>
 		</div>
 		<div class="login-container">
-			<h1>고객 로그인</h1>
+			<h1>로그인</h1>
 			<div class="input-box">
 				<label for="id">아이디</label> 
 				<input type="text" id="id" name="id" placeholder="아이디 입력" value="${user.id}">
@@ -44,14 +40,11 @@
 
 			<button type="submit" class="login-btn">로그인</button>
 			<div class="login-links">
-				<a href="${root}/user/id_find">아이디 찾기</a> | <a href="${root}/user/signup">회원가입</a>
+				<a href="${root}/id_find">아이디 찾기</a> | <a href="${root}/user/signup">회원가입</a>
 			</div>
 		</div>
 	</div>
 	</form>
-	<footer>
-		<jsp:include page="/layout/footer.jsp" />
-	</footer>
 </body>
 
 </html>

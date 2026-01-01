@@ -3,9 +3,11 @@ DROP DATABASE IF EXISTS hairshop;
 CREATE DATABASE IF NOT EXISTS hairshop;
 USE hairshop;
 
-DELETE FROM designer ;
+DELETE FROM users ;
 
+select * from users;
 
+CREATE USER 'hairshop'@'localhost' IDENTIFIED BY '123456';
 
 -- 리뷰 테이블 생성
 CREATE TABLE `review` (
@@ -107,3 +109,6 @@ ALTER TABLE `review` ADD CONSTRAINT `FK_reserved_TO_review_1` FOREIGN KEY (
 REFERENCES `reserved` (
 	`no`
 );
+
+
+

@@ -9,6 +9,8 @@ body {
 	height: 100vh;
 	background: #f2f2f2;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .find-wrap {
@@ -98,13 +100,4 @@ body {
 
 .bottom-links a:hover {
 	text-decoration: underline;
-}
-
-/* 추가! 영아 */
-.wrap {
-	height: 100%;
-    /* justify-items: center; */
-    align-items: center;
-    display: flex;
-    justify-content: center;
 }

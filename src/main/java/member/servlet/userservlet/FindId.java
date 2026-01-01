@@ -24,7 +24,7 @@ public class FindId extends HttpServlet {
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
 		request.setAttribute("id", id);
-		request.getRequestDispatcher("/login/id_find_test.jsp").forward(request, response);
+		request.getRequestDispatcher("/login/user_id_find.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

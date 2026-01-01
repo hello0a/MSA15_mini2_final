@@ -48,11 +48,16 @@ body {
 }
 
 .reserve-details {
-	border-top: 1px solid #eee;
+	border: 1px solid #d0d0d0;
+    border-radius: 0.7rem;
+    padding: 10px;
+    margin-bottom: 15px;	
+/* 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding: 24px 0;
 	margin-bottom: 30px;
-}
+ */
+ }
 
 .reserve-details p {
 	display: flex;

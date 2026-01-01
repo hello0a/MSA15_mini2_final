@@ -9,6 +9,8 @@ body {
 	height: 100vh;
 	background: #f2f2f2;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* 로고 */
@@ -95,17 +97,4 @@ body {
 
 .login-links a:hover {
 	text-decoration: underline;
-}
-
-
-/* 추가! 영아 */
-form {
-	justify-items: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 0 auto;
-    /* width: 100%; */
-    height: 100%;
-    min-height: 100vh;
 }

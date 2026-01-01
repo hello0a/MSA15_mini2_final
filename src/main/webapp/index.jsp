@@ -22,7 +22,7 @@
 	</header>
 
 	<div class=containerbox>
-		<section class="sec1">	
+		<section class="sec1">
 			<div class="container">
 				<div>
 					<h1>나 홀로 망머샵</h1>
@@ -37,11 +37,11 @@
 			<h2>샵 예약하기</h2>
 		</section>
 		
-		<form id="reserve" action="${root}/reserve/reserve.html" method="post">
+		<form id="reserve" action="${root}/reserve" method="get">
 		<section class="sec3">
-			<select class="shop" id="shop" name="shop">
+			<select class="shop" id="designerNo" name="designerNo">
 				<c:forEach var="d" items="${designerList}">
-                	<option value="${d.id}">${d.shop_name}</option>
+                	<option value="${d.no}">${d.shop_name}</option>
            		</c:forEach>
 			</select>
 			<button type="submit" class="btn">예약하기</button>

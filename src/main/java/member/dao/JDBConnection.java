@@ -22,10 +22,10 @@ public class JDBConnection {
 			
 			con = DriverManager.getConnection(url, id, password);
 			
-			System.out.println("DB ���� ����!");
+			System.out.println("DB 연동 성공!");
 					
 		} catch (Exception e) {
-			System.err.println("DB ���� ����!");
+			System.err.println("DB 연동 실패!");
 			e.printStackTrace();
 		}	
 	}

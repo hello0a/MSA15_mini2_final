@@ -9,24 +9,19 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="${root}/layout/common.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="${root}/login/css/id_find.css">
 	<title>아이디 찾기</title>
 </head>
 
 <body>
-<header>
-		<jsp:include page="/layout/header.jsp" />
-	</header>
-	<div class="wrap">
 	<div class="find-wrap">
 		<h1 class="title">아이디 찾기</h1>
 
 		<!-- 이름 -->
-		<form action="${root}/id_find" method="post">
+		<form action="${root}/designer/id_find" method="post">
 		<div class="input-box">
-			<label>이름</label> 
+			<label>이름</label>
 			<input type="text" id="name" name="name" placeholder="이름을 입력하세요">
 		</div>
 
@@ -49,12 +44,9 @@
 
 		<!-- 하단 링크 -->
 		<div class="bottom-links">
-			<a href="${root}/login">로그인</a> |<a href="${root}/user/signup">회원가입</a>
+			<a href="${root}/designer/login">로그인</a> | <a href="${root}/designer/signup">회원가입</a>
 		</div>
 	</div>
-	</div>
 </body>
-<footer>
-		<jsp:include page="/layout/footer.jsp" />
-	</footer>
+
 </html>

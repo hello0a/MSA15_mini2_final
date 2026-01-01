@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ include file="/layout/common.jsp" %>
+<%@ page language="java" contentType="text/html;" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
     <html lang="ko">
 
     <head>
@@ -7,13 +12,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>리뷰 작성 - 망머샵 미용실</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      	<link rel="stylesheet" href="${root}/layout/common.css">
         <link rel="stylesheet" href="css/review.css">
-        <link rel="stylesheet" href="css/common.css">
     </head>
 
     <body>
- 	<jsp:include page="/layout/header.jsp" />
 
+   	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
 
         <div class="review-container">
             <div class="header">
@@ -106,7 +113,9 @@
             }
             
         </script>
-	<jsp:include page="/layout/footer.jsp" />
+        
 	    </body>
-
+   	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
     </html>

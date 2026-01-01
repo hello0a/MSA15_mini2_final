@@ -27,7 +27,7 @@ public class DesignerFindId extends HttpServlet {
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
 		request.setAttribute("id", id);
-		request.getRequestDispatcher("/login/designer_id_find_test.jsp").forward(request, response);
+		request.getRequestDispatcher("/login/designer_id_find.jsp").forward(request, response);
 		
 	}
 
