@@ -1,10 +1,10 @@
-<%@page import="reservation.dto.DesignerDTO"%>
+<%@page import="member.dto.DesignerDTO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ include file="/layout/common.jsp" %>
-<%@ page language="java" contentType="text/html;" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +20,7 @@
 	<header>
 		<jsp:include page="/layout/header.jsp" />
 	</header>
+
 	<div class=containerbox>
 		<section class="sec1">	
 			<div class="container">
@@ -35,19 +36,22 @@
 		<section class="sec2">
 			<h2>샵 예약하기</h2>
 		</section>
+		
+		<form id="reserve" action="${root}/reserve/reserve.html" method="post">
 		<section class="sec3">
-			<select class="shop" id="">
+			<select class="shop" id="shop" name="shop">
 				<c:forEach var="d" items="${designerList}">
-                <option value="${d.id}">${d.shop_name}</option>
-           		 </c:forEach>
+                	<option value="${d.id}">${d.shop_name}</option>
+           		</c:forEach>
 			</select>
-			<button class="btn">예약하기</button>
+			<button type="submit" class="btn">예약하기</button>
 		</section>
-			</div>
-	
-<footer>
-	<jsp:include page="/layout/footer.jsp" />
-</footer>
+		</form>
+	</div>
+
+	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
 
 </body>
 

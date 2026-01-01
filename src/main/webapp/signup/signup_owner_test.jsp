@@ -21,24 +21,24 @@
 
 				<form id="ownerSignupForm" action="${root}/designer/signup" method="post" onsubmit="return checkForm()">
 					<div class="input-group">
-						<input type="text" name="id" placeholder="아이디 (영문+숫자 포함, 4~12자)" required>
+						<input type="text" name="id" value="test" placeholder="아이디 (영문+숫자 포함, 4~12자)" required>
 					</div>
 					<div class="input-group">
-						<input type="password" name="pw" placeholder="비밀번호 (영문+숫자+특수문자 포함, 8자 이상)" required>
+						<input type="password" name="pw" value="test01test01!" placeholder="비밀번호 (영문+숫자+특수문자 포함, 8자 이상)" required>
 					</div>
 					<div class="input-group">
-						<input type="email" name="email" placeholder="이메일 주소(ex: example@gmail.com)">
+						<input type="email" name="email" value="test01@naver.com" placeholder="이메일 주소(ex: example@gmail.com)">
 					</div>
 					<div class="input-group">
-						<input type="text" name="name" placeholder="이름 (한글 포함, 2~5자)" required>
+						<input type="text" name="name" value="안영아" placeholder="이름 (한글 포함, 2~5자)" required>
 					</div>
 					<div class="birth-group">
-						<input type="text" name="birthYear" placeholder="년(4자)" maxlength="4"> 
-						<input type="text" name="birthMonth" placeholder="월"> 
-						<input type="text" name="birthDay" placeholder="일">
+						<input type="text" name="birthYear" value="2025" placeholder="년(4자)" maxlength="4"> 
+						<input type="text" name="birthMonth" value="12" placeholder="월"> 
+						<input type="text" name="birthDay" value="12" placeholder="일">
 					</div>
 					<div class="select-group">
-						<label> <input type="radio" name="gender" value="M">
+						<label> <input type="radio" name="gender" value="M" checked>
 							<div class="radio-box">남자</div>
 						</label> <label> <input type="radio" name="gender" value="F">
 							<div class="radio-box">여자</div>
@@ -49,29 +49,29 @@
 						</label>
 					</div>
 					<div class="input-group">
-						<input type="tel" name="phone" placeholder="매장 연락처 / 휴대전화번호">
+						<input type="tel" name="phone" value="010-0000-0000" placeholder="매장 연락처 / 휴대전화번호">
 					</div>
 					<div class="input-group">
-						<input type="text" name="shopName" placeholder="매장명">
+						<input type="text" name="shopName" value="망머샵" placeholder="매장명">
 					</div>
 					<div class="input-group">
-						<input type="text" name="bizNum" placeholder="사업자등록 번호">
+						<input type="text" name="bizNum" value="000000000" placeholder="사업자등록 번호">
 					</div>
 					<div class="sub-title">매장주소</div>
 					<div class="address-dropdown-group">
 						<select name="city">
-							<option value="" disabled selected>시(선택)</option>
-							<option value="seoul">서울</option>
+							<option value="" disabled>시(선택)</option>
+							<option value="seoul" selected>서울</option>
 							<option value="gyeonggi">경기</option>
 							<option value="incheon">인천</option>
 						</select> <select name="district">
-							<option value="" disabled selected>구(선택)</option>
-							<option value="gangnam">강남구</option>
+							<option value="" disabled>구(선택)</option>
+							<option value="gangnam" selected>강남구</option>
 							<option value="seocho">서초구</option>
 						</select>
 					</div>
 					<div class="input-group">
-						<input type="text" name="addrDetail" placeholder="상세주소(입력)">
+						<input type="text" name="addrDetail" value="ajsdfjasdfs" placeholder="상세주소(입력)">
 					</div>
 					<button type="submit" class="btn-submit">회 원 가 입</button>
 				</form>

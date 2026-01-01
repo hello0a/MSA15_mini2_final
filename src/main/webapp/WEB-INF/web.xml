@@ -5,6 +5,7 @@
 	id="WebApp_ID" version="6.0">
 	<display-name>MSA15_mini2_reload</display-name>
 	<welcome-file-list>
+		<welcome-file>main</welcome-file>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>index.htm</welcome-file>

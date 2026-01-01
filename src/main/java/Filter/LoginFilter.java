@@ -11,12 +11,12 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import reservation.dto.PersistenceLogins;
-import reservation.dto.UserDTO;
-import reservation.service.PersistenceLoginsService;
-import reservation.service.PersistenceLoginsServiceImpl;
-import reservation.service.UserService;
-import reservation.service.UserServiceImpl;
+import member.dto.PersistenceLogins;
+import member.dto.UserDTO;
+import member.service.PersistenceLoginsService;
+import member.service.PersistenceLoginsServiceImpl;
+import member.service.UserService;
+import member.service.UserServiceImpl;
 
 import java.io.IOException;
 import java.net.URLDecoder;

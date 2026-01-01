@@ -23,36 +23,36 @@
 
 				<form id="signupForm" action="${root}/user/signup" method="post" onsubmit="return checkForm()">
 					<div class="input-group">
-						<input type="text" name = "id" maxlength="12" placeholder="아이디 (영문+숫자 포함, 4~12자)" required>
+						<input type="text" name = "id" maxlength="12" value="test" placeholder="아이디 (영문+숫자 포함, 4~12자)" required>
 					</div>
 
 					<div class="input-group">
-						<input type="password" name="pw" minlength="8" placeholder="비밀번호 (영문+숫자+특수문자 포함, 8자 이상)" required>
+						<input type="password" name="pw" minlength="8" value="test01test01!" placeholder="비밀번호 (영문+숫자+특수문자 포함, 8자 이상)" required>
 					</div>
 
 					<div class="input-group">
-						<input type="email" name="email" placeholder="이메일 주소(ex: example@gmail.com)">
+						<input type="email" name="email" value="test01@naver.com" placeholder="이메일 주소(ex: example@gmail.com)">
 					</div>
 
 					<div class="input-group">
-						<input type="text" name="name" placeholder="이름 (한글 포함, 2~5자)" required>
+						<input type="text" name="name" value="홍길동"placeholder="이름 (한글 포함, 2~5자)" required>
 					</div>
 
 					<div class="input-group">
-						<input type="tel" name="phone" placeholder="휴대전화번호">
+						<input type="tel" name="phone" value="010-0000-0000" placeholder="휴대전화번호">
 					</div>
 
 					<div class="birth-group">
-						<input type="text" name="birthYear" placeholder="년(4자)" maxlength="4"> 
-						<input type="text" name="birthMonth" placeholder="월">
-						<input type="text" name="birthDay" placeholder="일">
+						<input type="text" name="birthYear" value="2025" placeholder="년(4자)" maxlength="4"> 
+						<input type="text" name="birthMonth" value="12" placeholder="월">
+						<input type="text" name="birthDay" value="12" placeholder="일">
 					</div>
 
 					<div class="select-group">
 						<label> <input type="radio" name="gender" value="M">
-							<div class="radio-box">남자</div>
+							<div class="radio-box" checked>남자</div>
 						</label> <label> <input type="radio" name="gender" value="F">
-							<div class="radio-box">여자</div>
+							<div class="radio-box" checked>여자</div>
 						</label>
 						</div> 
 					<div class="select-group">
